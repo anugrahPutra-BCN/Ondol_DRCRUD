@@ -18,7 +18,7 @@ namespace CRUDMahasiswaADO
         }
 
         private void ConnectDatabase()
-        // Event tombol Connect, membuka koneksi ke database
+        // Membuka koneksi ke database, tampilkan pesan berhasil/gagal
         {
             try
             {
@@ -34,7 +34,8 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void btnConnect_Click(object sender, EventArgs e) 
+        private void btnConnect_Click(object sender, EventArgs e)
+        // Event tombol Connect, membuka koneksi ke database
         {
             ConnectDatabase();
         }
