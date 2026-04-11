@@ -271,7 +271,8 @@ namespace CRUDMahasiswaADO
             txtNIM.Focus();
         }
 
-        private void FormMahasiswa_Load_1(object sender, EventArgs e) 
+        private void FormMahasiswa_Load_1(object sender, EventArgs e)
+        // Event saat form pertama kali dibuka, inisialisasi combobox dan DataGridView
         {
             {
                 cmbJK.Items.Clear();
