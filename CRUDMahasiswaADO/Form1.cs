@@ -155,7 +155,8 @@ namespace CRUDMahasiswaADO
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
-        private void BtnUpdate_Click(object sender, EventArgs e) 
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        // Event tombol Update, mengubah data Mahasiswa berdasarkan NIM
         {
             try
             {
