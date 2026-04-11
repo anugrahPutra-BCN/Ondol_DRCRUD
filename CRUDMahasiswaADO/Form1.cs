@@ -9,7 +9,8 @@ namespace CRUDMahasiswaADO
     {
         private readonly SqlConnection conn; // Objek koneksi ke SQL Server, dipakai untuk eksekusi query
         private readonly string connectionString =
-            @"Data Source=DESKTOP-98D81B1\ANUGRAH;Initial Catalog=DBAkademikADO;Integrated Security=True"; 
+            @"Data Source=DESKTOP-98D81B1\ANUGRAH;Initial Catalog=DBAkademikADO;Integrated Security=True";
+        // Membuka koneksi ke database, tampilkan pesan berhasil/gagal
         public FormMahasiswa()
         {
             InitializeComponent();
