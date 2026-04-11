@@ -17,7 +17,8 @@ namespace CRUDMahasiswaADO
             conn = new SqlConnection(connectionString);
         }
 
-        private void ConnectDatabase() 
+        private void ConnectDatabase()
+        // Event tombol Connect, membuka koneksi ke database
         {
             try
             {
