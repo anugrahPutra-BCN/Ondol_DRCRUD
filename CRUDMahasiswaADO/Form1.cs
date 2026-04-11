@@ -86,7 +86,8 @@ namespace CRUDMahasiswaADO
 
         }
 
-        private void btnInsert_Click(object sender, EventArgs e) 
+        private void btnInsert_Click(object sender, EventArgs e)
+        // Event tombol Insert, menambahkan data Mahasiswa baru ke database
         {
             try
             {
