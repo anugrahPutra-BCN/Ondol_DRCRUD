@@ -259,7 +259,8 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void ClearForm() 
+        private void ClearForm()
+        // Membersihkan semua input form dan mengembalikan fokus ke txtNIM
         {
             txtNIM.Clear();
             txtNama.Clear();
