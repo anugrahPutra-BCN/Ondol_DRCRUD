@@ -7,16 +7,16 @@ namespace CRUDMahasiswaADO
 {
     public partial class FormMahasiswa : Form
     {
-        private readonly SqlConnection conn;
+        private readonly SqlConnection conn; // Objek koneksi ke SQL Server, dipakai untuk eksekusi query
         private readonly string connectionString =
-            @"Data Source=DESKTOP-98D81B1\ANUGRAH;Initial Catalog=DBAkademikADO;Integrated Security=True";
+            @"Data Source=DESKTOP-98D81B1\ANUGRAH;Initial Catalog=DBAkademikADO;Integrated Security=True"; // String koneksi berisi konfigurasi server, database, dan metode autentikasi
         public FormMahasiswa()
         {
             InitializeComponent();
             conn = new SqlConnection(connectionString);
         }
 
-        private void ConnectDatabase()
+        private void ConnectDatabase() // Membuka koneksi ke database, tampilkan pesan berhasil/gagal
         {
             try
             {
@@ -32,12 +32,12 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e) // Event tombol Connect, membuka koneksi ke database
         {
             ConnectDatabase();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void btnLoad_Click(object sender, EventArgs e) // Event tombol Load, menampilkan data Mahasiswa ke DataGridView
         {
             try
             {
@@ -51,7 +51,7 @@ namespace CRUDMahasiswaADO
 
                 dataGridView1.Columns.Add("NIM", "NIM");
                 dataGridView1.Columns.Add("Nama", "NAMA");
-                dataGridView1.Columns.Add("Jenis Kelamin", "JenisKelamin");
+                dataGridView1.Columns.Add("JenisKelamin", "Jenis Kelamin");
                 dataGridView1.Columns.Add("TanggalLahir", "Tanggal Lahir");
                 dataGridView1.Columns.Add("Alamat", "Alamat");
                 dataGridView1.Columns.Add("KodeProdi", "KodeProdi");
@@ -82,7 +82,7 @@ namespace CRUDMahasiswaADO
 
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)
+        private void btnInsert_Click(object sender, EventArgs e) // Event tombol Insert, menambahkan data Mahasiswa baru ke database
         {
             try
             {
@@ -150,7 +150,7 @@ namespace CRUDMahasiswaADO
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
-        private void btnUpdate_Click_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e) // Event tombol Update, mengubah data Mahasiswa berdasarkan NIM
         {
             try
             {
@@ -196,7 +196,7 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void btnDelete_Click_Click(object sender, EventArgs e)
+        private void btnDelete_Click_Click(object sender, EventArgs e) // Event tombol Delete, menghapus data Mahasiswa berdasarkan NIM
         {
             try
             {
@@ -237,21 +237,21 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)  // Event klik baris DataGridView, mengisi form dengan data baris terpilih
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 txtNIM.Text = row.Cells["NIM"].Value.ToString();
                 txtNama.Text = row.Cells["Nama"].Value.ToString();
-                cmbJK.Text = row.Cells["Jenis Kelamin"].Value.ToString();
+                cmbJK.Text = row.Cells["JenisKelamin"].Value.ToString();
                 dtpTanggalLahir.Value = Convert.ToDateTime(row.Cells["TanggalLahir"].Value);
                 txtAlamat.Text = row.Cells["Alamat"].Value.ToString();
                 txtKodeProdi.Text = row.Cells["KodeProdi"].Value.ToString();
             }
         }
 
-        private void ClearForm()
+        private void ClearForm() // Membersihkan semua input form dan mengembalikan fokus ke txtNIM
         {
             txtNIM.Clear();
             txtNama.Clear();
@@ -259,9 +259,10 @@ namespace CRUDMahasiswaADO
             dtpTanggalLahir.Value = DateTime.Now;
             txtAlamat.Clear();
             txtKodeProdi.Clear();
-        }        
+            txtNIM.Focus();
+        }
 
-        private void FormMahasiswa_Load_1(object sender, EventArgs e)
+        private void FormMahasiswa_Load_1(object sender, EventArgs e) // Event saat form pertama kali dibuka, inisialisasi combobox dan DataGridView
         {
             {
                 cmbJK.Items.Clear();

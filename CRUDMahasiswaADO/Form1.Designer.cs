@@ -41,7 +41,7 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnDelete_Click = new System.Windows.Forms.Button();
             this.cmbJK = new System.Windows.Forms.ComboBox();
-            this.btnUpdate_Click = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -157,15 +157,15 @@
             this.cmbJK.Size = new System.Drawing.Size(121, 28);
             this.cmbJK.TabIndex = 8;
             // 
-            // btnUpdate_Click
+            // btnUpdate
             // 
-            this.btnUpdate_Click.Location = new System.Drawing.Point(483, 122);
-            this.btnUpdate_Click.Name = "btnUpdate_Click";
-            this.btnUpdate_Click.Size = new System.Drawing.Size(156, 35);
-            this.btnUpdate_Click.TabIndex = 15;
-            this.btnUpdate_Click.Text = "Mengubah Data";
-            this.btnUpdate_Click.UseVisualStyleBackColor = true;
-            this.btnUpdate_Click.Click += new System.EventHandler(this.btnUpdate_Click_Click);
+            this.btnUpdate.Location = new System.Drawing.Point(483, 122);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(156, 35);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Mengubah Data";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // label2
             // 
@@ -211,13 +211,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1824, 795);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDelete_Click);
-            this.Controls.Add(this.btnUpdate_Click);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.txtKodeProdi);
             this.Controls.Add(this.txtAlamat);
@@ -254,7 +254,7 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnDelete_Click;
         private System.Windows.Forms.ComboBox cmbJK;
-        private System.Windows.Forms.Button btnUpdate_Click;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnInsert;
