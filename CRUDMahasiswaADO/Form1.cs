@@ -9,14 +9,14 @@ namespace CRUDMahasiswaADO
     {
         private readonly SqlConnection conn; // Objek koneksi ke SQL Server, dipakai untuk eksekusi query
         private readonly string connectionString =
-            @"Data Source=DESKTOP-98D81B1\ANUGRAH;Initial Catalog=DBAkademikADO;Integrated Security=True"; // String koneksi berisi konfigurasi server, database, dan metode autentikasi
+            @"Data Source=DESKTOP-98D81B1\ANUGRAH;Initial Catalog=DBAkademikADO;Integrated Security=True"; 
         public FormMahasiswa()
         {
             InitializeComponent();
             conn = new SqlConnection(connectionString);
         }
 
-        private void ConnectDatabase() // Membuka koneksi ke database, tampilkan pesan berhasil/gagal
+        private void ConnectDatabase() 
         {
             try
             {
@@ -32,12 +32,12 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void btnConnect_Click(object sender, EventArgs e) // Event tombol Connect, membuka koneksi ke database
+        private void btnConnect_Click(object sender, EventArgs e) 
         {
             ConnectDatabase();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e) // Event tombol Load, menampilkan data Mahasiswa ke DataGridView
+        private void btnLoad_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -82,7 +82,7 @@ namespace CRUDMahasiswaADO
 
         }
 
-        private void btnInsert_Click(object sender, EventArgs e) // Event tombol Insert, menambahkan data Mahasiswa baru ke database
+        private void btnInsert_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -150,7 +150,7 @@ namespace CRUDMahasiswaADO
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
-        private void BtnUpdate_Click(object sender, EventArgs e) // Event tombol Update, mengubah data Mahasiswa berdasarkan NIM
+        private void BtnUpdate_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -196,7 +196,7 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void btnDelete_Click_Click(object sender, EventArgs e) // Event tombol Delete, menghapus data Mahasiswa berdasarkan NIM
+        private void btnDelete_Click_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -237,7 +237,7 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)  // Event klik baris DataGridView, mengisi form dengan data baris terpilih
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e) 
         {
             if (e.RowIndex >= 0)
             {
@@ -251,7 +251,7 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void ClearForm() // Membersihkan semua input form dan mengembalikan fokus ke txtNIM
+        private void ClearForm() 
         {
             txtNIM.Clear();
             txtNama.Clear();
@@ -262,7 +262,7 @@ namespace CRUDMahasiswaADO
             txtNIM.Focus();
         }
 
-        private void FormMahasiswa_Load_1(object sender, EventArgs e) // Event saat form pertama kali dibuka, inisialisasi combobox dan DataGridView
+        private void FormMahasiswa_Load_1(object sender, EventArgs e) 
         {
             {
                 cmbJK.Items.Clear();
