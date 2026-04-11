@@ -202,7 +202,8 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void btnDelete_Click_Click(object sender, EventArgs e) 
+        private void btnDelete_Click_Click(object sender, EventArgs e)
+        // Event tombol Delete, menghapus data Mahasiswa berdasarkan NIM
         {
             try
             {
