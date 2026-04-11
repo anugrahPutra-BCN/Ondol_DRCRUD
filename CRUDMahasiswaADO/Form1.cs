@@ -244,7 +244,8 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e) 
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        // Event klik baris DataGridView, mengisi form dengan data baris terpilih
         {
             if (e.RowIndex >= 0)
             {
