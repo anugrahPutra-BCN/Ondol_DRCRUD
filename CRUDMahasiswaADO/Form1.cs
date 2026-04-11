@@ -40,7 +40,8 @@ namespace CRUDMahasiswaADO
             ConnectDatabase();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e) 
+        private void btnLoad_Click(object sender, EventArgs e)
+        // Event tombol Load, menampilkan data Mahasiswa ke DataGridView
         {
             try
             {
