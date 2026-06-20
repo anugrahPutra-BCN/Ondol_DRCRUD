@@ -54,6 +54,7 @@ namespace CRUDMahasiswaADO
             ChartsArea.Legends.Clear();
             ChartsArea.ChartAreas.Clear();
 
+            // Mengonfigurasi area utama grafik termasuk judul sumbu X dan Y, serta latar belakang transparan
             ChartsArea ca = new ChartsArea("MainArea");
             ca.AxisX.Title = "Program Studi";
             ca.AxisY.Title = "Jumlah Mahasiswa";
