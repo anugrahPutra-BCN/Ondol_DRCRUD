@@ -62,7 +62,8 @@ namespace CRUDMahasiswaADO
             ChartsArea.ChartAreas.Add(ca);
             try
             {
-                if(button == 1)
+                // Mengambil data grafik berdasarkan filter tahun jika tombol filter (button == 1) aktif
+                if (button == 1)
                 {
                     dt = dbLogic.GetDataChartByTahun(dtpTanggalMasuk.Value);
                 }
