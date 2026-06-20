@@ -140,6 +140,7 @@ namespace CRUDMahasiswaADO
             loadDataChart();
         }
 
+        // Membuka form manajemen data mahasiswa (Form1) dan menyembunyikan form Dashboard saat ini
         private void btn_Data_Mhs_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
