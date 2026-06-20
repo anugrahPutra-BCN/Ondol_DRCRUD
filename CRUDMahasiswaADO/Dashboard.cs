@@ -127,6 +127,7 @@ namespace CRUDMahasiswaADO
 
         }
 
+        // Event handler saat tombol load ditekan: set status filter aktif lalu perbarui grafik
         private void btn_Load_Click(object sender, EventArgs e)
         {
             button = 1;
