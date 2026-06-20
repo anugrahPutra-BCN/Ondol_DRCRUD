@@ -113,6 +113,7 @@ namespace CRUDMahasiswaADO
         }
         private void cmbTipe_SelectedValueChanged(object sender, EventArgs e)
         {
+            // Keluar dari fungsi jika ComboBox berubah saat form sedang dalam proses inisialisasi awal
             if (isInitializing)
                 return;
             if (button == 1)
