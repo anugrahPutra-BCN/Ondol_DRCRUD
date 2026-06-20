@@ -80,8 +80,8 @@ namespace CRUDMahasiswaADO
                     foreach (DataRow row in dt.Rows)
                     {
                         string prodi = row["NamaProdi"].ToString();
-                        int jumlah = Convert.ToInt32((long)row["JmlhMhs"]);
-                        s.Points.AddXY(prodi, jumlah);
+                        int jumlah = Convert.ToInt32((long)row["JmlhMhs"]); // Mengonversi tipe data kembalian database (long) ke tipe data integer yang didukung grafik
+                            s.Points.AddXY(prodi, jumlah);
                     }
                     ChartsArea.Series.Add(s);
                 }
