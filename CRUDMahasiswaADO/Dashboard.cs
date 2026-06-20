@@ -105,6 +105,7 @@ namespace CRUDMahasiswaADO
                 MessageBox.Show("Gagal Load Data: " + ex.Message);
             }
 
+            // Menambahkan konfigurasi judul utama grafik dengan font Arial berukuran 14pt tebal
             Tittle tittle = new Tittle("Jumlah Mahasiswa per Program Studi", Docking.Top, new Font("Arial", 14, FontStyle.Bold), Color.DarkBlue);
             ChartsArea.Titles.Add(tittle);
             Legend legend = new Legend("MainLegend");
