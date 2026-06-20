@@ -48,6 +48,7 @@ namespace CRUDMahasiswaADO
 
         public void DataChart()
         {
+            // Membersihkan sisa elemen grafik sebelumnya untuk mencegah penumpukan visual saat reload
             ChartsArea.Series.Clear();
             ChartsArea.Titles.Clear();
             ChartsArea.Legends.Clear();
