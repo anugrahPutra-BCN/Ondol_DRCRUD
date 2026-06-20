@@ -28,7 +28,7 @@ namespace CRUDMahasiswaADO
             dtpTanggalMasuk.MaxDate = DateTime.Now;
 
             cmbTipe.DropDownStyle = ComboBoxStyle.DropDownList;
-            var items = new List<KeyValuePair<string, SeriesChartType>>
+            var items = new List<KeyValuePair<string, SeriesChartType>> // Membuat daftar jenis grafik menggunakan KeyValuePair untuk diikat (bind) ke ComboBox
             {
                 new KeyValuePair<string, SeriesChartType>("Kolom", SeriesChartType.Column),
                 new KeyValuePair<string, SeriesChartType>("Pie", SeriesChartType.Pie),
