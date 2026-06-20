@@ -36,6 +36,7 @@ namespace CRUDMahasiswaADO
 
             isInitializing = true;
 
+            //  Mengatur sumber data ComboBox dan menentukan properti yang ditampilkan ke pengguna
             cmbTipe.DataSource = items;
             cmbTipe.DisplayMember = "Key";
             cmbTipe.ValueMember = "Value";
