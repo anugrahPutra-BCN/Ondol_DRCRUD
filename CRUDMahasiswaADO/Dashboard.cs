@@ -21,7 +21,7 @@ namespace CRUDMahasiswaADO
         {
             InitializeComponent();
 
-            dtpTanggalMasuk.MinDate = new DateTime(2000, 1, 1);
+            dtpTanggalMasuk.MinDate = new DateTime(2000, 1, 1); //  Menentukan batas minimal tahun (1 Januari 2000) pada kontrol DateTimePicker
             dtpTanggalMasuk.Format = DateTimePickerFormat.Custom;
             dtpTanggalMasuk.CustomFormat = "yyyy";
             dtpTanggalMasuk.ShowUpDown = true;
