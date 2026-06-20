@@ -95,8 +95,8 @@ namespace CRUDMahasiswaADO
                      {
                          string prodi = row["NamaProdi"].ToString();
                          int jumlah = Convert.ToInt32((long)row["JmlhMhs"]);
-                         s.Points.AddXY(prodi, jumlah);
-                     }
+                         s.Points.AddXY(prodi, jumlah); // Memetakan nama program studi (sumbu X) dan jumlah mahasiswa (sumbu Y) ke dalam titik grafik
+                        }
                      ChartsArea.Series.Add(s);
                 }
             }
